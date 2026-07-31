@@ -1,7 +1,7 @@
 //vite.config.mjs
 import { defineConfig } from 'vite';
 
-const JS_FILE = resolve('assets/src/scripts/main.js')
+const JS_FILE = resolve('assets/src/js/main.js')
 
 // Define where the compiled and minified JavaScript files will be saved
 const BUILD_DIR = resolve(__dirname, 'dist');
