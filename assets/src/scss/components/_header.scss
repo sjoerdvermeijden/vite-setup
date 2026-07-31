@@ -1,0 +1,10 @@
+@use '../setup//mixins' as *;
+
+.header {
+	background: red;
+
+	@include tablet {}
+
+    @include desktop {}
+
+}

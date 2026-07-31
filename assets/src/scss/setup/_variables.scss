@@ -1,0 +1,30 @@
+$primary: grey;
+$secondary: #AD5C51;
+
+$colors: (
+	grey: (
+		darker: #2c2d33,
+		dark: #43454b,
+		default: #aaaaaa,
+		light: #afada8,
+		lighter: #f4f4f4
+	),
+	yellow: (
+		default: #fff351,
+		light: #fff89e
+	),
+);
+
+// Fonts
+$font: 'https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap';
+$font-family: 'Sen', sans-serif;
+
+// Font sizes
+$font-size: 14px;
+$line-height: 28px;
+
+// Media queries
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktop_large: 1900px;
