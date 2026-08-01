@@ -1,5 +1,6 @@
 Add this to functions.php
 
+```
 /**
  * Enqueue scripts and styles.
  */
@@ -20,3 +21,5 @@ function tester_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'tester_scripts' );
+
+```
