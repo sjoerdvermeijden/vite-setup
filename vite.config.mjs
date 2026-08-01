@@ -1,6 +1,7 @@
 //vite.config.mjs
 import { defineConfig } from 'vite';
 import path from 'path';
+import VitePluginBrowserSync from 'vite-plugin-browser-sync'
 
 const JS_FILE = path.resolve('assets/src/js/main.js')
 
@@ -8,6 +9,7 @@ const JS_FILE = path.resolve('assets/src/js/main.js')
 const BUILD_DIR = path.resolve(__dirname, 'assets/dist');
 
 export default defineConfig({
+  plugins: [VitePluginBrowserSync()],
   css: {
     postcss: {
       plugins: [
