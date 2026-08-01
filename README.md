@@ -1,4 +1,4 @@
-Add this to functions.php
+Add this to functions.php and replace the existing enqueue
 
 ```
 /**
