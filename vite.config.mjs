@@ -8,6 +8,13 @@ const JS_FILE = path.resolve('assets/src/js/main.js')
 const BUILD_DIR = path.resolve(__dirname, 'assets/dist');
 
 export default defineConfig({
+  css: {
+    postcss: {
+      plugins: [
+        autoprefixer({}) // add options if needed
+      ],
+    }
+  },
   build: {
     assetsDir: '', // Will save the compiled JavaScript files in the root of the dist folder
     manifest: true, // Generate manifest.json file (for caching)
