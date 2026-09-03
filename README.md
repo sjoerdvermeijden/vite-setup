@@ -23,3 +23,13 @@ function tester_scripts() {
 add_action( 'wp_enqueue_scripts', 'tester_scripts' );
 
 ```
+
+Import an icon like this
+
+```
+<span class="icon">
+    <svg>
+        <use href="#icon-settings" fill="currentColor"></use>
+    </svg>
+</span>
+```

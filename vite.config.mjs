@@ -3,7 +3,6 @@ import { defineConfig } from 'vite';
 import path from 'path';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import autoprefixer from 'autoprefixer'
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import VitePluginBrowserSync from 'vite-plugin-browser-sync'
 
 const JS_FILE = path.resolve('assets/src/js/main.js')
