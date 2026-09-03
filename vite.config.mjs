@@ -11,27 +11,17 @@ const JS_FILE = path.resolve('assets/src/js/main.js')
 const BUILD_DIR = path.resolve(__dirname, 'assets/dist');
 
 export default defineConfig({
-  plugins: [
-    VitePluginBrowserSync(),
-    createSvgIconsPlugin({
-        // Specify the icon folder to be cached
-        iconDirs: [path.resolve(process.cwd(), './assets/src/icons')],
-        // Specify symbolId format
-        symbolId: 'icon-[dir]-[name]',
-
-        /**
-         * custom insert position
-         * @default: body-last
-         */
-        inject?: 'body-last' | 'body-first'
-
-        /**
-         * custom dom id
-         * @default: __svg__icons__dom__
-         */
-        customDomId: '__svg__icons__dom__',
-      }),
-  ],
+  plugins: [VitePluginBrowserSync({
+      dev: {
+        bs: {
+          ui: {
+            port: 8080
+          },
+          notify: false,
+          files: ['./assets/src/**/*'],
+        }
+      }
+  })],
   css: {
     postcss: {
       plugins: [
