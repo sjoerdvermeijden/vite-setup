@@ -1,6 +1,7 @@
 //vite.config.mjs
 import { defineConfig } from 'vite';
 import path from 'path';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import VitePluginBrowserSync from 'vite-plugin-browser-sync'
 
 const JS_FILE = path.resolve('assets/src/js/main.js')
@@ -9,7 +10,27 @@ const JS_FILE = path.resolve('assets/src/js/main.js')
 const BUILD_DIR = path.resolve(__dirname, 'assets/dist');
 
 export default defineConfig({
-  plugins: [VitePluginBrowserSync()],
+  plugins: [
+    VitePluginBrowserSync(),
+    createSvgIconsPlugin({
+        // Specify the icon folder to be cached
+        iconDirs: [path.resolve(process.cwd(), './assets/src/icons')],
+        // Specify symbolId format
+        symbolId: 'icon-[dir]-[name]',
+
+        /**
+         * custom insert position
+         * @default: body-last
+         */
+        inject?: 'body-last' | 'body-first'
+
+        /**
+         * custom dom id
+         * @default: __svg__icons__dom__
+         */
+        customDomId: '__svg__icons__dom__',
+      }),
+  ],
   css: {
     postcss: {
       plugins: [

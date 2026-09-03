@@ -11,4 +11,4 @@
 import '../scss/styles.scss'
 
 // Build the main JS file
-// ... other js files imports
+import 'virtual:svg-icons-register';
