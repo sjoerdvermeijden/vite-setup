@@ -62,27 +62,7 @@
         text-align: center;
     }
 
-	&--single {
-
-		#{$root}__padding {
-			padding: 25px 0;
-		}
-
-	}
-
     @include desktop {
-
-		&__background-illustration {
-			display: block;
-		}
-
-		&--single {
-
-			#{$root}__padding {
-				padding: 50px 0;
-			}
-
-		}
 
 		&__title {
 
