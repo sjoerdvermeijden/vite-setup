@@ -5,27 +5,6 @@
 
     position: relative;
 
-	&__background-illustration {
-		position: absolute;
-		display: none;
-		top: 50%;
-		transform: translate(0, -50%);
-		left: 0;
-		width: 300px;
-		height: auto;
-
-		svg {
-			width: 100%;
-			height: auto;
-		}
-
-		&--right {
-			right: 0;
-			left: auto;
-		}
-
-	}
-
 	&__title {
 
 		&:not(:last-child) {
